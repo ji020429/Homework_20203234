@@ -12,6 +12,7 @@ open source SW homework
      
 ### 2. 사용방법
 > getopts optstring varname [args...]
+
 > ex) while getopts "a:b:ij" opt
   1) optstring(첫 번째 파라미터): 옵션으로 사용될 문자열 입력
   2) varname(두 번째 파라미터): 옵션으로 활용되는 변수 사용
@@ -29,4 +30,5 @@ open source SW homework
 |-----|----------|----------|
 |invalid 옵션 사용|opt 값을 ? 문자로 설정하고 OPTARG 값은 unset. 오류 메시지를 출력|	opt 값을 ? 문자로 설정하고 OPTARG 값은 해당 옵션 문자로 설정|
 |옵션인수 값을 제공하지 않음|opt 값을 ? 문자로 설정하고 OPTARG 값은 unset. 오류 메시지를 출력|opt 값을 : 문자로 설정하고 OPTARG 값은 해당 옵션 문자로 설정|
+
 참고 https://mug896.github.io/bash-shell/getopts.html
