@@ -55,6 +55,7 @@ list.txt 파일을 한줄씩 읽으면서 abd 문자를 찾으면 그 줄을 출
 (2) 치환 
 >sed 's/addrass/address/' list.txt
 addrass를 address로 바꿈 **BUT, 원본파일을 바꾸지 않고 출력만 바꿈**
+
 >sed 's/\t/\ /' list.txt 
 탭문자를 엔터로 변환
 
@@ -70,3 +71,6 @@ Src 문자가 있는 줄만 지우지 않음
 처음 1,2줄 지움
 
 참고: https://blog.wonizz.tk/2019/03/05/%EB%AA%85%EB%A0%B9%EC%96%B4-sed-%EB%B0%8F-awk-%EC%82%AC%EC%9A%A9%EB%B2%95/
+
+
+### 3. 특징
