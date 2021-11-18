@@ -70,7 +70,12 @@ Src 문자가 있는 줄만 지우지 않음
 >sed '1,2d' 1.html
 처음 1,2줄 지움
 
-참고: https://blog.wonizz.tk/2019/03/05/%EB%AA%85%EB%A0%B9%EC%96%B4-sed-%EB%B0%8F-awk-%EC%82%AC%EC%9A%A9%EB%B2%95/
+
+참고: https://blog.wonizz.tk/2019/03![참고 이미지](https://user-images.githubusercontent.com/94359749/142359582-e09280e5-ca04-41ca-8c23-0df118fe1b7a.png)
+/05/%EB%AA%85%EB%A0%B9%EC%96%B4-sed-%EB%B0%8F-awk-%EC%82%AC%EC%9A%A9%EB%B2%95/
 
 
 ### 3. 특징
+  1) 쉘, 쉘스크립트에서 파이프(|)와 같이 사용 가능
+  2) 정규표현식 가능 **BUT 특수문자 앞에 역 슬래시를 붙여줘야함**
+     ex) sed 's/\$man/man/g' test.txt
