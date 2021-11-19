@@ -307,14 +307,14 @@ awk [OPTION...] [awk program] [ARGUMENT...]
 
      # action 생략
       $ awk '/p/' ./file.txt            # file.txt에서 p를 포함하는 레코드 출력.
-    ```
+
 
 
 ### 4. awk 명령 사용 예
 | awk 사용 예 | 명령어 옵션 |
 |----------|------------------------|
 | 파일의 전체 내용 출력 | 	awk '{ print }' [FILE] |
-| 필드 값 출력 | awk '{ print $1 }' [FILE] |
+| 필드 값 출력 ex) 첫 번째 필드 값 출력 | awk '{ print $1 }' [FILE] |
 | 필드 값에 임의 문자열을 같이 출력 | awk '{print "STR"$1, "STR"$2}' [FILE] |
 | 지정된 문자열을 포함하는 레코드만 출력 | awk '/STR/' [FILE] |
 | 특정 필드 값 비교를 통해 선택된 레코드만 출력 | 	awk '$1 == 10 { print $2 }' [FILE] |
