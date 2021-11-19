@@ -68,8 +68,8 @@ while getopts 'srd:f:' c
  
  
 ### 2. 사용방법
-![getopt]("https://user-images.githubusercontent.com/94359749/142604370-fe1d95b9-1a4f-459c-b832-333acd949ab3.PNG" width="60%" height="60%")
-![Uploading getopt.PNG…]()
+!<img src="https://user-images.githubusercontent.com/94359749/142604370-fe1d95b9-1a4f-459c-b832-333acd949ab3.PNG" width="60%" height="60%">
+
 
 > get -o|--options shortopts와 <-l|--longoptions longopts> <-n|--name progname> <--> parameters
 
@@ -164,6 +164,12 @@ echo "$RET"
 > sed -n '/abd/p' list.txt 
 list.txt 파일을 한줄씩 읽으면서 abd 문자를 찾으면 그 줄을 출력(p)
 '-n 의미: 읽은 것을 출력하지 않음'
+> sed -n '1p' <파일>
+첫 라인만 출력
+> sed -n '1,3p' <파일>
+첫 번째 행부터 세 번째 행까지 출력
+> sed -n '8,$p' <파일>
+여덟 번째 행부터 끝 행까지 출력
 
 (2) 치환 
 > sed 's/addrass/address/' list.txt
@@ -177,7 +183,7 @@ addrass를 address로 바꿈 **BUT, 원본파일을 바꾸지 않고 출력만 �
 > scriptfile - s/
 
 (4) 삭제
->   sed '/없애버릴 글자/d' 파일
+>   sed '/없애버릴 글자/d' <파일>
 예: sed '/TD/d' 1.html
 TD 문자가 포함된 줄을 삭제후 출력
 
@@ -190,6 +196,8 @@ Src 문자가 있는 줄만 지우지 않음
 (5) 파이프(|)와 사용
 > who | sed -e 's; .*$;;'
 
+
+
 참고: https://blog.wonizz.tk/2019/03!
 
 (https://user-images.githubusercontent.com/94359749/142359582-e09280e5-ca04-41ca-8c23-0df118fe1b7a.png)
@@ -199,3 +207,26 @@ Src 문자가 있는 줄만 지우지 않음
   1) 쉘, 쉘스크립트에서 파이프(|)와 같이 사용 가능
   2) 정규표현식 가능 **BUT 특수문자 앞에 역 슬래시를 붙여줘야함**
      ex) sed 's/\$man/man/g' test.txt
+  **3) 원본을 건드리지 않음**
+
+
+#### 4. sed subcommand 명령어 종류와 의미
+|subcommand|의미|
+|-------|-----------------|
+| a\ | 현재 행에 하나 이상의 새로운 행을 추가 |
+| c\ | 현재 행의 내용을 새로운 내용을 교체 |
+| d | 행을 삭제 |
+| i/ | 현재 행의 위에 텍스트 삽입 |
+| h | 패턴 스페이스의 내용을 홀드 스페이스에 복사 |
+| H | 패턴 스페이스의 내용을 홀드 스페이스에 추가 |
+| g | 홀드 스페이스의 내용을 패턴 스페이스에 복사 (패턴 스페이스가 비어있지 않은 경우: 덮어쓰기) |
+| G | 홀드 스페이스의 내용을 패턴 스페이스에 복사 (패턴 스페이스가 비어있지 않은 경우: 그 뒤에 추가) |
+| l | 출력되지 않는 특수문자를 명확하게 출력 |
+| p | 행을 출력 |
+| n | 다음 입력 행을 첫 번째 명령어가 아닌 다음 명령어에서 처리하게 함 |
+| q | sed를 종료 |
+| r | 파일로부터 행을 읽어옴 |
+| ! | 선택된 행을 제외한 나머지 전체 행에 명령어 적용 |
+| s | 문자열을 치환 |
+
+참고 https://jhnyang.tistory.com/287
