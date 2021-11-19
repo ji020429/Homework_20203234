@@ -14,7 +14,7 @@ open source SW homework
 ### 2. 사용방법
 > getopts optstring varname [args...]
 
-> ex) ```while getopts "a:b:cdef" opt```
+> ex) `while getopts "a:b:cdef" opt`
   1) optstring(첫 번째 파라미터): 옵션으로 사용될 문자열 입력, 옵션을 정의하는 문자
   2) varname(두 번째 파라미터): 옵션으로 활용되는 변수 사용
   3) args: 명령 실행시 사용된 인수 값이 옴, 생략시 "$@" 사용
@@ -67,7 +67,8 @@ while getopts 'srd:f:' c
      (옵션: short 옵션과 long 옵션이 존재, **getopt는 long 옵션 처리, short 옵션도 처리 **)
  
  
-### 2. 사용방법![getopt](https://user-images.githubusercontent.com/94359749/142604370-fe1d95b9-1a4f-459c-b832-333acd949ab3.PNG)
+### 2. 사용방법
+![getopt]("https://user-images.githubusercontent.com/94359749/142604370-fe1d95b9-1a4f-459c-b832-333acd949ab3.PNG" width="60%" height="60%")
 ![Uploading getopt.PNG…]()
 
 > get -o|--options shortopts와 <-l|--longoptions longopts> <-n|--name progname> <--> parameters
@@ -160,20 +161,20 @@ echo "$RET"
 >sed [-e script][-f script-file][file...]
 
 (1) 찾기, 출력
->sed -n '/abd/p' list.txt 
+> sed -n '/abd/p' list.txt 
 list.txt 파일을 한줄씩 읽으면서 abd 문자를 찾으면 그 줄을 출력(p)
 '-n 의미: 읽은 것을 출력하지 않음'
 
 (2) 치환 
->sed 's/addrass/address/' list.txt
+> sed 's/addrass/address/' list.txt
 addrass를 address로 바꿈 **BUT, 원본파일을 바꾸지 않고 출력만 바꿈**
 
->sed 's/\t/\ /' list.txt 
+> sed 's/\t/\ /' list.txt 
 탭문자를 엔터로 변환
 
 
 (3) 추가
->scriptfile - s/
+> scriptfile - s/
 
 (4) 삭제
 >   sed '/없애버릴 글자/d' 파일
@@ -183,7 +184,7 @@ TD 문자가 포함된 줄을 삭제후 출력
 > sed '/Src/!d' 1.html
 Src 문자가 있는 줄만 지우지 않음
 
->sed '1,2d' 1.html
+> sed '1,2d' 1.html
 처음 1,2줄 지움
 
 (5) 파이프(|)와 사용
