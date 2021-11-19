@@ -294,21 +294,21 @@ awk [OPTION...] [awk program] [ARGUMENT...]
 ```
 
 **1) 파일의 전체 내용 출력**: awk 파일에 "print" 액션만 지정한 경우, 입력으로 지정된 파일의 내용을 출력
-> $ awk '{ print }' ./file.txt                >file.txt의 전체 파일 내용 출력
+> $ awk '{ print }' ./file.txt                >>file.txt의 전체 파일 내용 출력
 
 **2) 필드 값 출력**: "print $n" 액션을 통해 n번째 필드 값을 출력 가능 (참고, "$0"은 전체 레코드를 나타내는 변수)
-> $ awk '{ print $1,$2 }' ./file.txt          >첫 번째, 두 번째 필드 값 출력.
-> $ awk '{ print $0}' ./file.txt              >레코드 출력.
+> $ awk '{ print $1,$2 }' ./file.txt          >>첫 번째, 두 번째 필드 값 출력.
+> $ awk '{ print $0}' ./file.txt              >>레코드 출력.
 
 **3) 필드 값에 임의 문자열을 같이 출력**
 > awk '{print "no:"$1, "user:"$2}' ./file.txt
 
 **4) 지정된 문자열을 포함하는 레코드만 출력**: awk의 패턴에 정규 표현식을 사용하여 문자열 패턴을 검사 가능 (이 때, 정규 표현식은 "/regex/" 형태로 지정 가능)
-> awk '/pp/' ./file.txt                       >"pp" 가 포함된 레코드만 유효.
-> awk '/[2-3]0/' ./file.txt                   >20, 30 이 포함된 레코드만 유효.
+> awk '/pp/' ./file.txt                       >>"pp" 가 포함된 레코드만 유효.
+> awk '/[2-3]0/' ./file.txt                   >>20, 30 이 포함된 레코드만 유효.
 
 **5) 특정 필드 값 비교를 통해 선택된 레코드만 출력**: awk program language의 표현식을 사용하여, 유효한 레코드를 위한 필드 값을 비교 가능
-> awk '$3 > 70 { print $0 }' ./file.txt       >세 번째 필드가 70보다 큰 레코드 출력.
+> awk '$3 > 70 { print $0 }' ./file.txt       >>세 번째 필드가 70보다 큰 레코드 출력.
 
 **6) 지정된 필드의 값을 더한 값 출력**: 총합은 모든 레코드 탐색이 끝난 시점인, "END" 패턴의 액션에서 실행
 > awk '{sum += $3} END { print sum }' ./file.txt
