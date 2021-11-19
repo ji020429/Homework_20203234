@@ -67,7 +67,9 @@ while getopts 'srd:f:' c
      (옵션: short 옵션과 long 옵션이 존재, **getopt는 long 옵션 처리, short 옵션도 처리 **)
  
  
-### 2. 사용방법
+### 2. 사용방법![getopt](https://user-images.githubusercontent.com/94359749/142604370-fe1d95b9-1a4f-459c-b832-333acd949ab3.PNG)
+![Uploading getopt.PNG…]()
+
 > get -o|--options shortopts와 <-l|--longoptions longopts> <-n|--name progname> <--> parameters
 
 > ex) getopt -o d:u:f:h -l diffs:,unit:,format:,help -- $@
@@ -129,7 +131,7 @@ echo "$RET"
 
 ### 3. 주의사항
 `--` 의 뒤 parameters 에서
-> ex) $(**getopt** -o d:u:f:h -l diffs:,unit:,format:,help -- **$@**) **"$@" 쌍따옴표가 없으면 getopt가짐**
+> ex) $(**getopt** -o d:u:f:h -l diffs:,unit:,format:,help -- **$@**) **"$@" 쌍따옴표가 없으면 $@가 아닌 getopt에 가짐**
  
  
 #### 4. 기타
@@ -145,6 +147,7 @@ echo "$RET"
 참고1 https://mug896.github.io/bash-shell/getopts.html
 
 참고2 https://gomudara.tistory.com/119
+
 
 ----
 ## 3. sed 명령어
