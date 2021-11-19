@@ -9,11 +9,12 @@ open source SW homework
      
      (옵션: short 옵션과 long 옵션이 존재, **getopts는 short 옵션 처리**)
      
-     
+ 
+ 
 ### 2. 사용방법
 > getopts optstring varname [args...]
 
-> ex) while getopts "a:b:cdef" opt
+> ex) ```while getopts "a:b:cdef" opt```
   1) optstring(첫 번째 파라미터): 옵션으로 사용될 문자열 입력
   2) varname(두 번째 파라미터): 옵션으로 활용되는 변수 사용
   3) args: 명령 실행시 사용된 인수 값이 옴, 생략시 "$@" 사용
@@ -56,10 +57,12 @@ Eggplant is
 Fig is
 
 
+
 ### 3. 주의사항
 `:` getopts는 한 개의 문자만을 구분자로 사용
 `:`이 붙는다는 것은 뒤에 value가 붙게됨을 의미
 인수를 받으면 `:`을 붙여주고 OPTARG 라는 쉘 변수에 실제 옵션의 값이 세팅
+
 
 
 ### 4. error reporting과 관련하여 모드 제공
@@ -69,6 +72,7 @@ Fig is
 |옵션인수 값을 제공하지 않음|opt 값을 ? 문자로 설정하고 OPTARG 값은 unset. 오류 메시지를 출력|opt 값을 : 문자로 설정하고 OPTARG 값은 해당 옵션 문자로 설정|
 
 참고 https://mug896.github.io/bash-shell/getopts.html
+
 
 
 
