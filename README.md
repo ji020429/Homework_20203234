@@ -67,7 +67,7 @@ while getopts 'srd:f:' c
   3) 명령행 인자로 전달된 옵션을 편리하게 처리할 수 있도록 도와주는 함수
      
      
-     (옵션: short 옵션과 long 옵션이 존재, **getopt는 long 옵션 처리, short 옵션도 처리 **)
+     (옵션: short 옵션과 long 옵션이 존재, **getopt는 short 옵션 처리**)
  
  
 ### 2. 사용방법
