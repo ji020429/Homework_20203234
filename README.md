@@ -281,7 +281,8 @@ echo "$RET"
 
 
 ### 2. 사용방법
-> awk [OPTION...] [awk program] [ARGUMENT...]
+> ```
+awk [OPTION...] [awk program] [ARGUMENT...]
       OPTION
         -F        : 필드 구분 문자 지정.
         -f        : awk program 파일 경로 지정.
@@ -290,7 +291,7 @@ echo "$RET"
         -f 옵션이 사용되지 않은 경우, awk가 실행할 awk program 코드 지정.
       ARGUMENT
         입력 파일 지정 또는 variable 값 지정.
-
+```
 
 ### 3. 특징
   1) 기본적으로 입력 데이터를 라인 단위의 레코드로 인식 (각 레코드에 들어 있는 텍스트는 공백문자(space, tab)로 구분된 필드들로 분류)
