@@ -9,8 +9,7 @@ open source SW homework
      
      (옵션: short 옵션과 long 옵션이 존재, **getopts는 short 옵션 처리**)
      
- 
- 
+  
 ### 2. 사용방법
 > getopts optstring varname [args...]
 
@@ -46,23 +45,23 @@ echo "Fig is "$FIG""
 ```
 
 * bash 스크립트 출력
-> bash script.sh -a apple -b banana -c cherry -d dfruit -e eggplant -f fig
+``` bash script.sh -a apple -b banana -c cherry -d dfruit -e eggplant -f fig```
 
 * 결과
->Apple is apple
+```
+Apple is apple
 Banana is banana
 Cherry is 
 Dfruit is 
 Eggplant is 
 Fig is
-
+```
 
 
 ### 3. 주의사항
 `:` getopts는 한 개의 문자만을 구분자로 사용
 `:`이 붙는다는 것은 뒤에 value가 붙게됨을 의미
 인수를 받으면 `:`을 붙여주고 OPTARG 라는 쉘 변수에 실제 옵션의 값이 세팅
-
 
 
 ### 4. error reporting과 관련하여 모드 제공
@@ -73,7 +72,7 @@ Fig is
 
 참고 https://mug896.github.io/bash-shell/getopts.html
 
-
+----
 
 
 ## 2. getopt 명령어
@@ -82,6 +81,7 @@ Fig is
 > 
 
 
+----
 ## 3. sed 명령어
 ### 1. 사용목적
   1) 편집(수정, 찾기, 출력 치환, 삭제, 글추가)
