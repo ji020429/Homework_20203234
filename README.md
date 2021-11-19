@@ -277,7 +277,7 @@ echo "$RET"
 - 필드 값 비교에 따라 레코드 출력
 
 
-!<img src="https://user-images.githubusercontent.com/94359749/142647921-43fb2268-a339-46c9-b553-1b5e58a6cc21.PNG" width="70%" height="70%">
+<img src="https://user-images.githubusercontent.com/94359749/142647921-43fb2268-a339-46c9-b553-1b5e58a6cc21.PNG" width="70%" height="70%">
 
 
 ### 2. 사용방법
