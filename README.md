@@ -239,3 +239,67 @@ Src 문자가 있는 줄만 지우지 않음
 
 
 ## 4. awk 명령어
+### 1. 사용목적
+  1) 지정된 파일로부터 데이터를 분류한 다음,
+     분류된 텍스트 데이터를 바탕으로 패턴 매칭 여부를 검사하거나 데이터 조작 및 연산 등의 액션을 수행, 
+     그 결과 출력
+ 
+ <awk 명령으로 할 수 있는 일>
+- 텍스트 파일의 전체 내용 출력
+- 파일의 특정 필드만 출력
+- 특정 필드에 문자열을 추가해서 출력
+- 패턴이 포함된 레코드 출력
+- 특정 필드에 연산 수행 결과 출력
+- 필드 값 비교에 따라 레코드 출력
+
+
+!<img src="https://user-images.githubusercontent.com/94359749/142647921-43fb2268-a339-46c9-b553-1b5e58a6cc21.PNG" width="70%" height="70%">
+
+
+### 2. 사용방법
+> awk [OPTION...] [awk program] [ARGUMENT...]
+      OPTION
+        -F        : 필드 구분 문자 지정.
+        -f        : awk program 파일 경로 지정.
+        -v        : awk program에서 사용될 특정 variable값 지정.
+      awk program
+        -f 옵션이 사용되지 않은 경우, awk가 실행할 awk program 코드 지정.
+      ARGUMENT
+        입력 파일 지정 또는 variable 값 지정.
+
+
+### 3. 특징
+  1) 기본적으로 입력 데이터를 라인 단위의 레코드로 인식 (각 레코드에 들어 있는 텍스트는 공백문자(space, tab)로 구분된 필드들로 분류)
+  2) 식별된 레코드 및 필드 값들은 awk 프로그램에 의해 패턴 매칭 및 다양한 액션의 파라미터로 사용
+  3) awk program은 스크립트 형식의 프로그래밍 언어로 작성되기 때문에 작성 방법이 다양
+     awk program 기본 구조: 'pattern { action }' 
+     즉, awk 사용방법 > awk [OPTION...] 'pattern { action }' [ARGUMENT...] 
+     주의) 'pattern { action }' 생략 가능, pattern 생략시: 모든 레코드가 적용, action 생략시: print 적용
+     `
+     # pattern 생략
+      $ awk '{ print }' ./file.txt      # file.txt의 모든 레코드 출력.
+
+     # action 생략
+      $ awk '/p/' ./file.txt            # file.txt에서 p를 포함하는 레코드 출력.
+    `
+
+
+### 4. awk 명령 사용 예
+| awk 사용 예 | 명령어 옵션 |
+|----------|------------------------|
+| 파일의 전체 내용 출력 | 	awk '{ print }' [FILE] |
+| 필드 값 출력 | awk '{ print $1 }' [FILE] |
+| 필드 값에 임의 문자열을 같이 출력 | awk '{print "STR"$1, "STR"$2}' [FILE] |
+| 지정된 문자열을 포함하는 레코드만 출력 | awk '/STR/' [FILE] |
+| 특정 필드 값 비교를 통해 선택된 레코드만 출력 | 	awk '$1 == 10 { print $2 }' [FILE] |
+| 특정 필드들의 합 | awk '{sum += $3} END { print sum }' [FILE] |
+| 여러 필드들의 합| awk '{ for (i=2; i<=NF; i++) total += $i }; END { print "TOTAL : "total }' [FILE] |
+| 레코드 단위로 필드 합 및 평균 값 구하기 | awk '{ sum = 0 } {sum += ($3+$4+$5) } { print $0, sum, sum/3 }' [FILE] |
+| 필드에 연산을 수행한 결과 출력 | awk '{print $1, $2, $3+2, $4, $5}' [FILE] |
+| 레코드 또는 필드의 문자열 길이 검사 | 사	awk ' length($0) > 20' [FILE] |
+| 파일에 저장된 awk program 실행 | 	awk -f [AWK FILE] [FILE] |
+| 필드 구분 문자 변경 | 	awk -F ':' '{ print $1 }' [FILE] |
+| awk 실행 결과 레코드 정렬 | 	awk '{ print $0 }' [FILE] |
+| 특정 레코드만 출력 | awk 'NR == 2 { print $0; exit }' [FILE] |
+| 출력 필드 너비 지정 | awk '{ printf "%-3s %-8s %-4s %-4s %-4s\n", $1, $2, $3, $4, $5}' [FILE] |
+| 필드 중 최대 값 출력 | awk '{max = 0; for (i=3; i<NF; i++) max = ($i > max) ? $i : max ; print max}' [FILE] |
