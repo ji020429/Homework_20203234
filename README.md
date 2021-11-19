@@ -175,23 +175,29 @@ echo "$RET"
 
 (1) 찾기, 출력
 > sed -n '/abd/p' list.txt 
+
 list.txt 파일을 한줄씩 읽으면서 abd 문자를 찾으면 그 줄을 출력(p)
 '-n 의미: 읽은 것을 출력하지 않음'
 
 > sed -n '1p' <파일>
+
 첫 라인만 출력
 
 > sed -n '1,3p' <파일>
+
 첫 번째 행부터 세 번째 행까지 출력
 
 > sed -n '8,$p' <파일>
+
 여덟 번째 행부터 끝 행까지 출력
 
 (2) 치환 
 > sed 's/addrass/address/' list.txt
+
 addrass를 address로 바꿈 **BUT, 원본파일을 바꾸지 않고 출력만 바꿈**
 
 > sed 's/\t/\ /' list.txt 
+
 탭문자를 엔터로 변환
 
 
@@ -200,16 +206,20 @@ addrass를 address로 바꿈 **BUT, 원본파일을 바꾸지 않고 출력만 �
 
 (4) 삭제
 >   sed '/없애버릴 글자/d' <파일>
+
 예: sed '/TD/d' 1.html
 TD 문자가 포함된 줄을 삭제후 출력
 
 > sed '/Src/!d' 1.html
+
 Src 문자가 있는 줄만 지우지 않음
 
 > sed '1,2d' 1.html
+
 처음 1,2줄 지움
 
 (5) 파이프(|)와 사용
+
 > who | sed -e 's; .*$;;'
 
 
@@ -283,6 +293,7 @@ Src 문자가 있는 줄만 지우지 않음
   1) 기본적으로 입력 데이터를 라인 단위의 레코드로 인식 (각 레코드에 들어 있는 텍스트는 공백문자(space, tab)로 구분된 필드들로 분류)
   2) 식별된 레코드 및 필드 값들은 awk 프로그램에 의해 패턴 매칭 및 다양한 액션의 파라미터로 사용
   3) awk program은 스크립트 형식의 프로그래밍 언어로 작성되기 때문에 작성 방법이 다양
+     ```
      awk program 기본 구조: 'pattern { action }' 
      즉, awk 사용방법 > awk [OPTION...] 'pattern { action }' [ARGUMENT...] 
      주의) 'pattern { action }' 생략 가능, pattern 생략시: 모든 레코드가 적용, action 생략시: print 적용
@@ -292,7 +303,7 @@ Src 문자가 있는 줄만 지우지 않음
 
      # action 생략
       $ awk '/p/' ./file.txt            # file.txt에서 p를 포함하는 레코드 출력.
-    `
+    ```
 
 
 ### 4. awk 명령 사용 예
