@@ -85,7 +85,8 @@ while getopts 'srd:f:' c
   3) longopts: 긴 옵션을 정의하는 문자 (ex. diffs와 같은 긴 옵션 정의) ,(콤마)로 구분
   4) progname: 오류 발생시 리포팅할 프로그램 명칭(**현재 셀 스크립트 파일명**)
   5) parameters: 옵션에 해당하는 실제 명령 구문 (ex. 모든 파라미터를 뜻하는 $@ 사용)
-
+ 
+* 스크립트 예시
 ```
 #!/bin/sh
 
@@ -132,6 +133,7 @@ echo "$RET"
 참고1 https://www.youtube.com/watch?v=DS3PV1q3dwU&ab_channel=%EC%8B%9C%EB%8B%88%EC%96%B4%EC%BD%94%EB%94%A9
 
 참고2 https://github.com/indiflex/refs/tree/main/linux
+
 
 ### 3. 주의사항
 `--` 의 뒤 parameters 에서
