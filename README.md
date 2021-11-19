@@ -290,7 +290,8 @@ awk [OPTION...] [awk program] [ARGUMENT...]
       awk program
         -f 옵션이 사용되지 않은 경우, awk가 실행할 awk program 코드 지정.
       ARGUMENT
-        입력 파일 지정 또는 variable 값 지정. ```
+        입력 파일 지정 또는 variable 값 지정. 
+```
 
 
 ### 3. 특징
