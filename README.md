@@ -62,7 +62,7 @@ while getopts 'srd:f:' c
   3) 명령행 인자로 전달된 옵션을 편리하게 처리할 수 있도록 도와주는 함수
      
      
-     (옵션: short 옵션과 long 옵션이 존재, **getopt는 long 옵션 처리**)
+     (옵션: short 옵션과 long 옵션이 존재, **getopt는 long 옵션 처리, short 옵션도 처리 **)
  
  
 ### 2. 사용방법
@@ -121,8 +121,8 @@ RET=`date $F --date="$D $U"`
 echo "$RET"
 ```
 
-참고 https://www.youtube.com/watch?v=DS3PV1q3dwU&ab_channel=%EC%8B%9C%EB%8B%88%EC%96%B4%EC%BD%94%EB%94%A9
-
+참고1 https://www.youtube.com/watch?v=DS3PV1q3dwU&ab_channel=%EC%8B%9C%EB%8B%88%EC%96%B4%EC%BD%94%EB%94%A9
+참고2 https://github.com/indiflex/refs/tree/main/linux
 
 ### 3. 주의사항
 `--` 의 뒤 parameters 에서
