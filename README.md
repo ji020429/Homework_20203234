@@ -51,6 +51,7 @@ while getopts 'srd:f:' c
 참고1 https://mug896.github.io/bash-shell/getopts.html
 
 참고2 https://systemdesigner.tistory.com/17
+
 참고3 https://jungfo.tistory.com/159
 
 ----
@@ -123,6 +124,7 @@ echo "$RET"
 ```
 
 참고1 https://www.youtube.com/watch?v=DS3PV1q3dwU&ab_channel=%EC%8B%9C%EB%8B%88%EC%96%B4%EC%BD%94%EB%94%A9
+
 참고2 https://github.com/indiflex/refs/tree/main/linux
 
 ### 3. 주의사항
@@ -141,6 +143,7 @@ echo "$RET"
 [규칙 10] 옵션의 끝을 나타내기 위해 --을 사용할 수 있다
 
 참고1 https://mug896.github.io/bash-shell/getopts.html
+
 참고2 https://gomudara.tistory.com/119
 
 ----
@@ -186,7 +189,6 @@ Src 문자가 있는 줄만 지우지 않음
 참고: https://blog.wonizz.tk/2019/03!
 
 (https://user-images.githubusercontent.com/94359749/142359582-e09280e5-ca04-41ca-8c23-0df118fe1b7a.png)
-/05/%EB%AA%85%EB%A0%B9%EC%96%B4-sed-%EB%B0%8F-awk-%EC%82%AC%EC%9A%A9%EB%B2%95/
 
 
 ### 3. 특징
