@@ -49,6 +49,7 @@ while getopts 'srd:f:' c
 |옵션인수 값을 제공하지 않음|opt 값을 ? 문자로 설정하고 OPTARG 값은 unset. 오류 메시지를 출력|opt 값을 : 문자로 설정하고 OPTARG 값은 해당 옵션 문자로 설정|
 
 참고1 https://mug896.github.io/bash-shell/getopts.html
+
 참고2 https://systemdesigner.tistory.com/17
 참고3 https://jungfo.tistory.com/159
 
