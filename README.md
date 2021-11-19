@@ -204,7 +204,6 @@ Src 문자가 있는 줄만 지우지 않음
 
 
 참고 https://blog.wonizz.tk/2019/03!
-!<img src="https://user-images.githubusercontent.com/94359749/142359582-e09280e5-ca04-41ca-8c23-0df118fe1b7a.png" width="60%" height="60%">
 
 
 ### 3. 특징
