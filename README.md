@@ -1,7 +1,10 @@
 # Homework_20203234 컴퓨터공학과 지수연
 open source SW homework
 
+
 ----
+
+
 ## 1. getopts 명령어
 ### 1. 사용목적
   1) 다양한 입력 값이 존재할 때 사용자와 개발자의 편의를 보장
@@ -68,7 +71,7 @@ while getopts 'srd:f:' c
  
  
 ### 2. 사용방법
-!<img src="https://user-images.githubusercontent.com/94359749/142604370-fe1d95b9-1a4f-459c-b832-333acd949ab3.PNG" width="60%" height="60%">
+!<img src="https://user-images.githubusercontent.com/94359749/142604370-fe1d95b9-1a4f-459c-b832-333acd949ab3.PNG" width="75%" height="75%">
 
 
 > get -o|--options shortopts와 <-l|--longoptions longopts> <-n|--name progname> <--> parameters
@@ -151,6 +154,8 @@ echo "$RET"
 
 
 ----
+
+
 ## 3. sed 명령어
 ### 1. 사용목적
   1) 편집(수정, 찾기, 출력 치환, 삭제, 글추가)
@@ -198,9 +203,8 @@ Src 문자가 있는 줄만 지우지 않음
 
 
 
-참고: https://blog.wonizz.tk/2019/03!
-
-(https://user-images.githubusercontent.com/94359749/142359582-e09280e5-ca04-41ca-8c23-0df118fe1b7a.png)
+참고 https://blog.wonizz.tk/2019/03!
+!<img src="https://user-images.githubusercontent.com/94359749/142359582-e09280e5-ca04-41ca-8c23-0df118fe1b7a.png" width="60%" height="60%">
 
 
 ### 3. 특징
@@ -210,7 +214,7 @@ Src 문자가 있는 줄만 지우지 않음
   **3) 원본을 건드리지 않음**
 
 
-#### 4. sed subcommand 명령어 종류와 의미
+### 4. sed subcommand 명령어 종류와 의미
 |subcommand|의미|
 |-------|-----------------|
 | a\ | 현재 행에 하나 이상의 새로운 행을 추가 |
@@ -230,3 +234,9 @@ Src 문자가 있는 줄만 지우지 않음
 | s | 문자열을 치환 |
 
 참고 https://jhnyang.tistory.com/287
+
+
+----
+
+
+## 4. awk 명령어
